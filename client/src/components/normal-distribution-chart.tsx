@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Chart, CategoryScale, LinearScale, LineElement, PointElement, Filler, Tooltip, Legend, ChartConfiguration, LineController } from 'chart.js';
 
 Chart.register(CategoryScale, LinearScale, LineElement, PointElement, Filler, Tooltip, Legend, LineController);
@@ -9,6 +10,7 @@ interface NormalDistributionChartProps {
 }
 
 export default function NormalDistributionChart({ userScore, percentile }: NormalDistributionChartProps) {
+  const { t } = useTranslation();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const chartRef = useRef<Chart | null>(null);
 
@@ -47,7 +49,7 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
     // Find user position in the data
     const userIndex = Math.round(userScore);
     const userHighlight = normalData.map((_, index) => 
-      index <= userIndex ? normalData[index] : null
+      index <= userIndex ? normalData[index] : 0
     );
 
     const config: ChartConfiguration<'line'> = {
@@ -56,7 +58,7 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
         labels: labels.map(x => Math.round(x).toString()),
         datasets: [
           {
-            label: 'Population Distribution',
+            label: t('chart.populationDistribution', '전체 분포'),
             data: normalData,
             borderColor: 'rgb(99, 102, 241)',
             backgroundColor: gradient,
@@ -66,10 +68,10 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
             pointRadius: 0,
           },
           {
-            label: 'Your Position',
+            label: t('chart.yourPosition', '당신의 위치'),
             data: userHighlight,
             borderColor: 'rgb(239, 68, 68)',
-            backgroundColor: 'rgba(239, 68, 68, 0.2)',
+            backgroundColor: 'rgba(239, 68, 68, 0.3)',
             borderWidth: 3,
             fill: true,
             tension: 0.4,
@@ -84,7 +86,7 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
           x: {
             title: {
               display: true,
-              text: 'Score',
+              text: t('chart.scoreLabel', '점수'),
               font: {
                 size: 12,
                 weight: 'bold'
@@ -97,7 +99,7 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
           y: {
             title: {
               display: true,
-              text: 'Frequency',
+              text: t('chart.frequencyLabel', '빈도'),
               font: {
                 size: 12,
                 weight: 'bold'
@@ -129,11 +131,11 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
             padding: 12,
             callbacks: {
               title: function(context) {
-                return `Score: ${context[0].label}`;
+                return `${t('chart.scoreLabel', '점수')}: ${context[0].label}`;
               },
               label: function(context) {
                 if (context.datasetIndex === 1) {
-                  return `Your percentile: ${percentile}%`;
+                  return `${t('chart.yourPercentile', '당신의 백분위')}: ${percentile}%`;
                 }
                 return '';
               }
@@ -156,14 +158,14 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
         chartRef.current.destroy();
       }
     };
-  }, [userScore, percentile]);
+  }, [userScore, percentile, t]);
 
   return (
-    <div className="relative w-full h-64">
+    <div className="relative w-full h-64 flex justify-center">
       <canvas
         ref={canvasRef}
-        className="w-full h-full"
-        width="400"
+        className="max-w-lg h-full"
+        width="500"
         height="256"
       />
     </div>

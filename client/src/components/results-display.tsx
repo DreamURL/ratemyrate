@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "@/components/ui/dialog";
 import { ScoreResult, getLetterGrade } from "@/lib/scoring";
 import RadarChart from "@/components/radar-chart";
 import NormalDistributionChart from "./normal-distribution-chart";
@@ -141,11 +141,11 @@ export default function ResultsDisplay({ results, onRetry }: ResultsDisplayProps
         <Card className="bg-white rounded-2xl shadow-lg">
           <CardContent className="p-8">
             <h4 className="text-xl font-bold text-slate-900 mb-6 text-center">
-              상위 {100 - percentile}% 입니다
+              {t('percentileTitle', '상위 {{percent}}% 입니다', { percent: 100 - percentile })}
             </h4>
             <div className="text-center mb-6">
               <p className="text-slate-600">
-                당신은 전체 사용자 중 상위 <span className="font-bold text-blue-600">{100 - percentile}%</span>에 해당합니다
+                {t('percentileDescription', '당신은 전체 사용자 중 상위 {{percent}}%에 해당합니다', { percent: 100 - percentile })}
               </p>
             </div>
             <NormalDistributionChart userScore={totalScore} percentile={percentile} />
@@ -182,7 +182,7 @@ export default function ResultsDisplay({ results, onRetry }: ResultsDisplayProps
             <h4 className="text-xl font-bold text-slate-900 mb-6">
               {t('detailedBreakdown')}
             </h4>
-            <p className="text-sm text-slate-500 mb-4">각 항목을 클릭하면 상세한 설명을 볼 수 있습니다</p>
+            <p className="text-sm text-slate-500 mb-4">{t('clickForDetails', '각 항목을 클릭하면 상세한 설명을 볼 수 있습니다')}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {Object.keys(breakdown).map((metric, index) => {
                 const { score } = breakdown[metric];
@@ -208,7 +208,10 @@ export default function ResultsDisplay({ results, onRetry }: ResultsDisplayProps
                     </DialogTrigger>
                     <DialogContent className="max-w-md">
                       <DialogHeader>
-                        <DialogTitle>{t(`metricNames.${metric}`)} - {letterGrade}등급</DialogTitle>
+                        <DialogTitle>{t(`metricNames.${metric}`)} - {letterGrade}{t('gradeLabel', '등급')}</DialogTitle>
+                        <DialogDescription>
+                          {t('gradeExplanationDescription', '이 항목의 등급이 매겨진 근거를 확인하세요')}
+                        </DialogDescription>
                       </DialogHeader>
                       <div className="py-4">
                         <p className="text-slate-700 leading-relaxed">
@@ -216,10 +219,10 @@ export default function ResultsDisplay({ results, onRetry }: ResultsDisplayProps
                         </p>
                         <div className="mt-4 p-3 bg-slate-50 rounded-lg">
                           <p className="text-sm text-slate-600">
-                            <strong>점수:</strong> {score}/100점
+                            <strong>{t('scoreLabel', '점수')}:</strong> {score}/100{t('pointsLabel', '점')}
                           </p>
                           <p className="text-sm text-slate-600">
-                            <strong>등급:</strong> {letterGrade}
+                            <strong>{t('gradeLabel', '등급')}:</strong> {letterGrade}
                           </p>
                         </div>
                       </div>
