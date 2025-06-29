@@ -78,8 +78,12 @@ export function serveStatic(app: Express) {
 
   app.use(express.static(distPath));
 
-  // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+  // 언어별 HTML 반환
+  app.use("*", (req, res) => {
+    let file = "index.html";
+    if (req.path === "/en") file = "en.html";
+    if (req.path === "/ja") file = "ja.html";
+    if (req.path === "/zh") file = "zh.html";
+    res.sendFile(path.resolve(distPath, file));
   });
 }
