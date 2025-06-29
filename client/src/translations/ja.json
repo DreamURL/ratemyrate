@@ -1,0 +1,156 @@
+{
+  "siteTitle": "私の競争力ランクテスト",
+  "mainTitle": "私の競争力ランクテスト",
+  "mainSubtitle": "親の影響なしであなたの成果を評価！",
+  "formTitle": "評価を完了してください",
+  "calculateBtn": "ランクを計算する 🚀",
+  "gradeTitle": {
+    "S": "S級の成功者！",
+    "A": "A級の成功者！",
+    "B": "B級の成功者！",
+    "C": "C級の成功者！"
+  },
+  "gradeDescription": {
+    "S": "素晴らしい！あなたは最高レベルの成功者です！",
+    "A": "優秀です！その調子で頑張り続けてください！",
+    "B": "良い結果です！改善の余地があります！",
+    "C": "努力を続けてください！誰もがどこかから始まります！"
+  },
+  "shareText": "私のランクは{{grade}}！{{url}} #競争力テスト",
+  "shareBtn": "Xでシェア",
+  "retryBtn": "もう一度",
+  "totalScore": "総合スコア",
+  "yourProfile": "あなたの競争力プロフィール",
+  "detailedBreakdown": "詳細な内訳",
+  "disclaimer": "このサービスは娯楽目的のみです。結果は主観的で保存されません。個人データの収集・保存は行いません。",
+  "terms": "利用規約",
+  "privacy": "プライバシーポリシー",
+  "contact": "お問い合わせ",
+  "fields": {
+    "age": {
+      "label": "年齢層",
+      "tooltip": "若い年齢は適応力と可能性を反映します",
+      "options": {
+        "": "年齢層を選択",
+        "20-25": "20-25歳",
+        "26-30": "26-30歳",
+        "31-35": "31-35歳",
+        "36-40": "36-40歳",
+        "41+": "41歳以上"
+      }
+    },
+    "education": {
+      "label": "教育レベル",
+      "tooltip": "高等教育は良い機会と相関関係があります",
+      "options": {
+        "": "教育レベルを選択",
+        "high-school": "高校",
+        "associate": "短大",
+        "bachelor": "学士",
+        "master": "修士",
+        "phd": "博士"
+      }
+    },
+    "occupation": {
+      "label": "職業",
+      "tooltip": "高ステータスの職業は安定性と名声で評価されます",
+      "options": {
+        "": "職業を選択",
+        "professional": "専門職（医師、弁護士、エンジニア）",
+        "corporate": "会社員",
+        "small-business": "個人事業主",
+        "freelancer": "フリーランサー",
+        "unemployed": "無職"
+      }
+    },
+    "wealth": {
+      "label": "自力で築いた資産 (USD)",
+      "tooltip": "自分で稼いだ資産のみを含めてください",
+      "options": {
+        "": "資産範囲を選択",
+        "<100k": "10万ドル未満",
+        "100k-500k": "10万〜50万ドル",
+        "500k-1m": "50万〜100万ドル",
+        "1m+": "100万ドル以上"
+      }
+    },
+    "marital": {
+      "label": "婚姻状況",
+      "tooltip": "関係状況は社会的マイルストーンを反映します",
+      "options": {
+        "": "状況を選択",
+        "married": "既婚",
+        "relationship": "交際中",
+        "single": "独身"
+      }
+    },
+    "housing": {
+      "label": "住居状況",
+      "tooltip": "不動産所有は重要な成功指標です",
+      "options": {
+        "": "住居を選択",
+        "urban-own": "都市部不動産所有",
+        "suburban-own": "郊外・地方不動産所有",
+        "rent": "賃貸",
+        "no-housing": "定住地なし"
+      }
+    },
+    "vehicle": {
+      "label": "車両所有",
+      "tooltip": "車両は財務状況とライフスタイルを反映します",
+      "options": {
+        "": "車両を選択",
+        "luxury": "高級車",
+        "mid-range": "中級車",
+        "economy": "軽自動車",
+        "no-car": "車なし"
+      }
+    },
+    "hobbies": {
+      "label": "趣味・余暇",
+      "tooltip": "アクティブな趣味はバランスの取れた生活を示します",
+      "options": {
+        "": "主な趣味を選択",
+        "sports": "スポーツ・フィットネス",
+        "travel": "旅行・アドベンチャー",
+        "reading": "読書・学習",
+        "gaming": "ゲーム",
+        "none": "定期的な趣味なし"
+      }
+    },
+    "social": {
+      "label": "社会的ネットワーク",
+      "tooltip": "強いネットワークは機会を向上させます",
+      "options": {
+        "": "ネットワーク規模を選択",
+        "extensive": "広範囲な専門ネットワーク",
+        "moderate": "適度な友人サークル",
+        "small": "小さなサークル",
+        "none": "非常に限定的なネットワーク"
+      }
+    },
+    "certifications": {
+      "label": "資格・スキル",
+      "tooltip": "スキルは専門的成長を示します",
+      "options": {
+        "": "資格を選択",
+        "professional": "専門資格",
+        "technical": "技術スキル",
+        "language": "語学力",
+        "none": "特別な資格なし"
+      }
+    }
+  },
+  "metricNames": {
+    "age": "年齢",
+    "education": "教育",
+    "occupation": "職業",
+    "wealth": "資産",
+    "marital": "婚姻状況",
+    "housing": "住居",
+    "vehicle": "車両",
+    "hobbies": "趣味",
+    "social": "社会的ネットワーク",
+    "certifications": "資格"
+  }
+}

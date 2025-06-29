@@ -1,0 +1,156 @@
+{
+  "siteTitle": "我的竞争力等级测试",
+  "mainTitle": "我的竞争力等级测试",
+  "mainSubtitle": "在没有父母帮助的情况下评估你的成就！",
+  "formTitle": "完成你的评估",
+  "calculateBtn": "计算我的等级 🚀",
+  "gradeTitle": {
+    "S": "S级成功者！",
+    "A": "A级成功者！",
+    "B": "B级成功者！",
+    "C": "C级成功者！"
+  },
+  "gradeDescription": {
+    "S": "出色！你是顶级成功者！",
+    "A": "优秀！继续努力前进！",
+    "B": "做得不错！还有改进空间！",
+    "C": "继续努力！每个人都有起点！"
+  },
+  "shareText": "我的竞争力等级是{{grade}}！在{{url}}测试你的 #竞争力测试",
+  "shareBtn": "在X上分享",
+  "retryBtn": "重新测试",
+  "totalScore": "总分",
+  "yourProfile": "你的竞争力档案",
+  "detailedBreakdown": "详细分析",
+  "disclaimer": "此服务仅用于娱乐目的。结果具有主观性且不会被存储。我们不收集或存储个人数据。",
+  "terms": "使用条款",
+  "privacy": "隐私政策",
+  "contact": "联系我们",
+  "fields": {
+    "age": {
+      "label": "年龄段",
+      "tooltip": "年轻年龄反映适应性和潜力",
+      "options": {
+        "": "选择你的年龄段",
+        "20-25": "20-25岁",
+        "26-30": "26-30岁",
+        "31-35": "31-35岁",
+        "36-40": "36-40岁",
+        "41+": "41岁以上"
+      }
+    },
+    "education": {
+      "label": "教育水平",
+      "tooltip": "高等教育与更好的机会相关",
+      "options": {
+        "": "选择你的教育水平",
+        "high-school": "高中",
+        "associate": "专科",
+        "bachelor": "本科",
+        "master": "硕士",
+        "phd": "博士"
+      }
+    },
+    "occupation": {
+      "label": "职业",
+      "tooltip": "高地位工作因稳定性和声望而受到重视",
+      "options": {
+        "": "选择你的职业",
+        "professional": "专业人士（医生、律师、工程师）",
+        "corporate": "企业员工",
+        "small-business": "小企业主",
+        "freelancer": "自由职业者",
+        "unemployed": "无业"
+      }
+    },
+    "wealth": {
+      "label": "自立财富 (美元)",
+      "tooltip": "只包括你自己赚取的资产",
+      "options": {
+        "": "选择你的财富范围",
+        "<100k": "少于10万美元",
+        "100k-500k": "10万-50万美元",
+        "500k-1m": "50万-100万美元",
+        "1m+": "100万美元以上"
+      }
+    },
+    "marital": {
+      "label": "婚姻状况",
+      "tooltip": "关系状况反映社会里程碑",
+      "options": {
+        "": "选择你的状况",
+        "married": "已婚",
+        "relationship": "恋爱中",
+        "single": "单身"
+      }
+    },
+    "housing": {
+      "label": "住房情况",
+      "tooltip": "房产所有权是重要的成功指标",
+      "options": {
+        "": "选择你的住房",
+        "urban-own": "拥有城市房产",
+        "suburban-own": "拥有郊区/农村房产",
+        "rent": "租房",
+        "no-housing": "无固定住所"
+      }
+    },
+    "vehicle": {
+      "label": "车辆拥有",
+      "tooltip": "车辆反映财务状况和生活方式",
+      "options": {
+        "": "选择你的车辆",
+        "luxury": "豪华车",
+        "mid-range": "中档车",
+        "economy": "经济型车",
+        "no-car": "无车"
+      }
+    },
+    "hobbies": {
+      "label": "爱好与休闲",
+      "tooltip": "积极的爱好显示平衡的生活",
+      "options": {
+        "": "选择你的主要爱好",
+        "sports": "运动健身",
+        "travel": "旅行冒险",
+        "reading": "阅读学习",
+        "gaming": "游戏",
+        "none": "无固定爱好"
+      }
+    },
+    "social": {
+      "label": "社交网络",
+      "tooltip": "强大的网络增强机会",
+      "options": {
+        "": "选择你的网络规模",
+        "extensive": "广泛的专业网络",
+        "moderate": "适度的朋友圈",
+        "small": "小圈子",
+        "none": "非常有限的网络"
+      }
+    },
+    "certifications": {
+      "label": "证书与技能",
+      "tooltip": "技能展示专业成长",
+      "options": {
+        "": "选择你的证书",
+        "professional": "专业证书",
+        "technical": "技术技能",
+        "language": "语言能力",
+        "none": "无特殊证书"
+      }
+    }
+  },
+  "metricNames": {
+    "age": "年龄",
+    "education": "教育",
+    "occupation": "职业",
+    "wealth": "财富",
+    "marital": "婚姻状况",
+    "housing": "住房",
+    "vehicle": "车辆",
+    "hobbies": "爱好",
+    "social": "社交网络",
+    "certifications": "证书"
+  }
+}

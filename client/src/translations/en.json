@@ -1,0 +1,156 @@
+{
+  "siteTitle": "My Competitiveness Rank Test",
+  "mainTitle": "My Competitiveness Rank Test",
+  "mainSubtitle": "Evaluate your achievements without parental influence!",
+  "formTitle": "Complete Your Assessment",
+  "calculateBtn": "Calculate My Rank 🚀",
+  "gradeTitle": {
+    "S": "S-Class Achiever!",
+    "A": "A-Class Achiever!",
+    "B": "B-Class Achiever!",
+    "C": "C-Class Achiever!"
+  },
+  "gradeDescription": {
+    "S": "Outstanding! You're in the top tier of achievers!",
+    "A": "Excellent! You're doing great, keep pushing forward!",
+    "B": "Good work! There's room for improvement!",
+    "C": "Keep striving! Everyone starts somewhere!"
+  },
+  "shareText": "My competitiveness rank is {{grade}}! Try yours at {{url}} #CompetitivenessTest",
+  "shareBtn": "Share on X",
+  "retryBtn": "Try Again",
+  "totalScore": "Total Score",
+  "yourProfile": "Your Competitiveness Profile",
+  "detailedBreakdown": "Detailed Breakdown",
+  "disclaimer": "This service is for entertainment purposes only. Results are subjective and not stored. We do not collect or store personal data.",
+  "terms": "Terms of Use",
+  "privacy": "Privacy Policy",
+  "contact": "Contact",
+  "fields": {
+    "age": {
+      "label": "Age Range",
+      "tooltip": "Younger age reflects adaptability and potential",
+      "options": {
+        "": "Select your age range",
+        "20-25": "20-25",
+        "26-30": "26-30",
+        "31-35": "31-35",
+        "36-40": "36-40",
+        "41+": "41+"
+      }
+    },
+    "education": {
+      "label": "Education Level",
+      "tooltip": "Higher education correlates with better opportunities",
+      "options": {
+        "": "Select your education",
+        "high-school": "High School",
+        "associate": "Associate Degree",
+        "bachelor": "Bachelor's Degree",
+        "master": "Master's Degree",
+        "phd": "PhD/Doctorate"
+      }
+    },
+    "occupation": {
+      "label": "Occupation",
+      "tooltip": "High-status jobs are valued for stability and prestige",
+      "options": {
+        "": "Select your occupation",
+        "professional": "Professional (Doctor, Lawyer, Engineer)",
+        "corporate": "Corporate Employee",
+        "small-business": "Small Business Owner",
+        "freelancer": "Freelancer",
+        "unemployed": "Unemployed"
+      }
+    },
+    "wealth": {
+      "label": "Self-Earned Wealth (USD)",
+      "tooltip": "Only include assets you earned yourself",
+      "options": {
+        "": "Select your wealth range",
+        "<100k": "Less than $100K",
+        "100k-500k": "$100K - $500K",
+        "500k-1m": "$500K - $1M",
+        "1m+": "$1M+"
+      }
+    },
+    "marital": {
+      "label": "Marital Status",
+      "tooltip": "Relationship status reflects social milestones",
+      "options": {
+        "": "Select your status",
+        "married": "Married",
+        "relationship": "In a Relationship",
+        "single": "Single"
+      }
+    },
+    "housing": {
+      "label": "Housing Situation",
+      "tooltip": "Property ownership is a key success indicator",
+      "options": {
+        "": "Select your housing",
+        "urban-own": "Own Urban Property",
+        "suburban-own": "Own Suburban/Rural Property",
+        "rent": "Rent",
+        "no-housing": "No Permanent Housing"
+      }
+    },
+    "vehicle": {
+      "label": "Vehicle Ownership",
+      "tooltip": "Vehicle reflects financial status and lifestyle",
+      "options": {
+        "": "Select your vehicle",
+        "luxury": "Luxury Car",
+        "mid-range": "Mid-Range Car",
+        "economy": "Economy Car",
+        "no-car": "No Car"
+      }
+    },
+    "hobbies": {
+      "label": "Hobbies & Leisure",
+      "tooltip": "Active hobbies show a balanced life",
+      "options": {
+        "": "Select your primary hobby",
+        "sports": "Sports & Fitness",
+        "travel": "Travel & Adventure",
+        "reading": "Reading & Learning",
+        "gaming": "Gaming",
+        "none": "No Regular Hobbies"
+      }
+    },
+    "social": {
+      "label": "Social Network",
+      "tooltip": "Strong networks enhance opportunities",
+      "options": {
+        "": "Select your network size",
+        "extensive": "Extensive Professional Network",
+        "moderate": "Moderate Friend Circle",
+        "small": "Small Circle",
+        "none": "Very Limited Network"
+      }
+    },
+    "certifications": {
+      "label": "Certifications & Skills",
+      "tooltip": "Skills demonstrate professional growth",
+      "options": {
+        "": "Select your certifications",
+        "professional": "Professional Certification",
+        "technical": "Technical Skills",
+        "language": "Language Proficiency",
+        "none": "No Special Certifications"
+      }
+    }
+  },
+  "metricNames": {
+    "age": "Age",
+    "education": "Education",
+    "occupation": "Occupation",
+    "wealth": "Wealth",
+    "marital": "Marital Status",
+    "housing": "Housing",
+    "vehicle": "Vehicle",
+    "hobbies": "Hobbies",
+    "social": "Social Network",
+    "certifications": "Certifications"
+  }
+}

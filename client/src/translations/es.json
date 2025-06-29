@@ -1,0 +1,156 @@
+{
+  "siteTitle": "¡Test de Clasificación de Competitividad!",
+  "mainTitle": "¡Test de Clasificación de Competitividad!",
+  "mainSubtitle": "¡Evalúa tus logros sin influencia parental!",
+  "formTitle": "Completa tu Evaluación",
+  "calculateBtn": "Calcular Mi Rango 🚀",
+  "gradeTitle": {
+    "S": "¡Éxito de Clase S!",
+    "A": "¡Éxito de Clase A!",
+    "B": "¡Éxito de Clase B!",
+    "C": "¡Éxito de Clase C!"
+  },
+  "gradeDescription": {
+    "S": "¡Sobresaliente! ¡Eres un triunfador de primera clase!",
+    "A": "¡Excelente! ¡Sigue adelante con fuerza!",
+    "B": "¡Buen trabajo! ¡Hay espacio para mejorar!",
+    "C": "¡Sigue esforzándote! ¡Todos empezamos en algún lugar!"
+  },
+  "shareText": "¡Mi rango de competitividad es {{grade}}! Prueba el tuyo en {{url}} #TestCompetitividad",
+  "shareBtn": "Compartir en X",
+  "retryBtn": "Intentar de Nuevo",
+  "totalScore": "Puntuación Total",
+  "yourProfile": "Tu Perfil de Competitividad",
+  "detailedBreakdown": "Desglose Detallado",
+  "disclaimer": "Este servicio es solo para entretenimiento. Los resultados son subjetivos y no se almacenan. No recopilamos ni almacenamos datos personales.",
+  "terms": "Términos de Uso",
+  "privacy": "Política de Privacidad",
+  "contact": "Contacto",
+  "fields": {
+    "age": {
+      "label": "Rango de Edad",
+      "tooltip": "La edad joven refleja adaptabilidad y potencial",
+      "options": {
+        "": "Selecciona tu rango de edad",
+        "20-25": "20-25",
+        "26-30": "26-30",
+        "31-35": "31-35",
+        "36-40": "36-40",
+        "41+": "41+"
+      }
+    },
+    "education": {
+      "label": "Nivel Educativo",
+      "tooltip": "La educación superior se correlaciona con mejores oportunidades",
+      "options": {
+        "": "Selecciona tu educación",
+        "high-school": "Bachillerato",
+        "associate": "Técnico Superior",
+        "bachelor": "Licenciatura",
+        "master": "Maestría",
+        "phd": "Doctorado"
+      }
+    },
+    "occupation": {
+      "label": "Ocupación",
+      "tooltip": "Los trabajos de alto estatus son valorados por estabilidad y prestigio",
+      "options": {
+        "": "Selecciona tu ocupación",
+        "professional": "Profesional (Doctor, Abogado, Ingeniero)",
+        "corporate": "Empleado Corporativo",
+        "small-business": "Pequeño Empresario",
+        "freelancer": "Freelancer",
+        "unemployed": "Desempleado"
+      }
+    },
+    "wealth": {
+      "label": "Riqueza Autoganada (USD)",
+      "tooltip": "Solo incluye activos que ganaste por ti mismo",
+      "options": {
+        "": "Selecciona tu rango de riqueza",
+        "<100k": "Menos de $100K",
+        "100k-500k": "$100K - $500K",
+        "500k-1m": "$500K - $1M",
+        "1m+": "$1M+"
+      }
+    },
+    "marital": {
+      "label": "Estado Civil",
+      "tooltip": "El estado de relación refleja hitos sociales",
+      "options": {
+        "": "Selecciona tu estado",
+        "married": "Casado",
+        "relationship": "En una Relación",
+        "single": "Soltero"
+      }
+    },
+    "housing": {
+      "label": "Situación de Vivienda",
+      "tooltip": "La propiedad inmobiliaria es un indicador clave de éxito",
+      "options": {
+        "": "Selecciona tu vivienda",
+        "urban-own": "Propietario Urbano",
+        "suburban-own": "Propietario Suburbano/Rural",
+        "rent": "Alquiler",
+        "no-housing": "Sin Vivienda Permanente"
+      }
+    },
+    "vehicle": {
+      "label": "Propiedad de Vehículo",
+      "tooltip": "El vehículo refleja estatus financiero y estilo de vida",
+      "options": {
+        "": "Selecciona tu vehículo",
+        "luxury": "Auto de Lujo",
+        "mid-range": "Auto de Gama Media",
+        "economy": "Auto Económico",
+        "no-car": "Sin Auto"
+      }
+    },
+    "hobbies": {
+      "label": "Pasatiempos y Ocio",
+      "tooltip": "Los pasatiempos activos muestran una vida equilibrada",
+      "options": {
+        "": "Selecciona tu pasatiempo principal",
+        "sports": "Deportes y Fitness",
+        "travel": "Viajes y Aventura",
+        "reading": "Lectura y Aprendizaje",
+        "gaming": "Videojuegos",
+        "none": "Sin Pasatiempos Regulares"
+      }
+    },
+    "social": {
+      "label": "Red Social",
+      "tooltip": "Las redes fuertes mejoran las oportunidades",
+      "options": {
+        "": "Selecciona el tamaño de tu red",
+        "extensive": "Red Profesional Extensa",
+        "moderate": "Círculo de Amigos Moderado",
+        "small": "Círculo Pequeño",
+        "none": "Red Muy Limitada"
+      }
+    },
+    "certifications": {
+      "label": "Certificaciones y Habilidades",
+      "tooltip": "Las habilidades demuestran crecimiento profesional",
+      "options": {
+        "": "Selecciona tus certificaciones",
+        "professional": "Certificación Profesional",
+        "technical": "Habilidades Técnicas",
+        "language": "Competencia Lingüística",
+        "none": "Sin Certificaciones Especiales"
+      }
+    }
+  },
+  "metricNames": {
+    "age": "Edad",
+    "education": "Educación",
+    "occupation": "Ocupación",
+    "wealth": "Riqueza",
+    "marital": "Estado Civil",
+    "housing": "Vivienda",
+    "vehicle": "Vehículo",
+    "hobbies": "Pasatiempos",
+    "social": "Red Social",
+    "certifications": "Certificaciones"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "siteTitle": "내 경쟁력 등급 테스트",
+  "mainTitle": "내 경쟁력 등급 테스트",
+  "mainSubtitle": "부모의 도움 없이 당신의 성취를 평가해보세요!",
+  "formTitle": "평가를 완료하세요",
+  "calculateBtn": "등급 계산하기 🚀",
+  "gradeTitle": {
+    "S": "S급 성공러!",
+    "A": "A급 성공러!",
+    "B": "B급 성공러!",
+    "C": "C급 성공러!"
+  },
+  "gradeDescription": {
+    "S": "최고입니다! 당신은 최상위권 성공러입니다!",
+    "A": "훌륭합니다! 계속 앞으로 나아가세요!",
+    "B": "잘하고 있어요! 개선의 여지가 있습니다!",
+    "C": "계속 노력하세요! 모든 사람은 어딘가에서 시작합니다!"
+  },
+  "shareText": "내 경쟁력 등급은 {{grade}}급! {{url}}에서 테스트해보세요 #경쟁력테스트",
+  "shareBtn": "X에서 공유",
+  "retryBtn": "다시 시도",
+  "totalScore": "총점",
+  "yourProfile": "당신의 경쟁력 프로필",
+  "detailedBreakdown": "세부 분석",
+  "disclaimer": "이 서비스는 오락 목적으로만 제공됩니다. 결과는 주관적이며 저장되지 않습니다. 개인 데이터를 수집하거나 저장하지 않습니다.",
+  "terms": "이용약관",
+  "privacy": "개인정보처리방침",
+  "contact": "연락처",
+  "fields": {
+    "age": {
+      "label": "연령대",
+      "tooltip": "젊은 나이는 적응력과 잠재력을 반영합니다",
+      "options": {
+        "": "연령대를 선택하세요",
+        "20-25": "20-25세",
+        "26-30": "26-30세",
+        "31-35": "31-35세",
+        "36-40": "36-40세",
+        "41+": "41세 이상"
+      }
+    },
+    "education": {
+      "label": "교육 수준",
+      "tooltip": "높은 교육 수준은 더 나은 기회와 상관관계가 있습니다",
+      "options": {
+        "": "교육 수준을 선택하세요",
+        "high-school": "고등학교",
+        "associate": "전문학사",
+        "bachelor": "학사",
+        "master": "석사",
+        "phd": "박사"
+      }
+    },
+    "occupation": {
+      "label": "직업",
+      "tooltip": "높은 지위의 직업은 안정성과 명성으로 가치를 인정받습니다",
+      "options": {
+        "": "직업을 선택하세요",
+        "professional": "전문직 (의사, 변호사, 엔지니어)",
+        "corporate": "대기업 직장인",
+        "small-business": "소상공인",
+        "freelancer": "프리랜서",
+        "unemployed": "무직"
+      }
+    },
+    "wealth": {
+      "label": "자수성가 자산 (USD)",
+      "tooltip": "본인이 직접 벌어들인 자산만 포함하세요",
+      "options": {
+        "": "자산 범위를 선택하세요",
+        "<100k": "10만 달러 미만",
+        "100k-500k": "10만 - 50만 달러",
+        "500k-1m": "50만 - 100만 달러",
+        "1m+": "100만 달러 이상"
+      }
+    },
+    "marital": {
+      "label": "결혼 상태",
+      "tooltip": "관계 상태는 사회적 이정표를 반영합니다",
+      "options": {
+        "": "상태를 선택하세요",
+        "married": "기혼",
+        "relationship": "연인 관계",
+        "single": "싱글"
+      }
+    },
+    "housing": {
+      "label": "주거 상황",
+      "tooltip": "부동산 소유는 중요한 성공 지표입니다",
+      "options": {
+        "": "주거 형태를 선택하세요",
+        "urban-own": "도시 부동산 소유",
+        "suburban-own": "교외/지방 부동산 소유",
+        "rent": "임차",
+        "no-housing": "고정 거주지 없음"
+      }
+    },
+    "vehicle": {
+      "label": "차량 소유",
+      "tooltip": "차량은 재정 상태와 라이프스타일을 반영합니다",
+      "options": {
+        "": "차량을 선택하세요",
+        "luxury": "고급차",
+        "mid-range": "중급차",
+        "economy": "경차",
+        "no-car": "차량 없음"
+      }
+    },
+    "hobbies": {
+      "label": "취미 및 여가",
+      "tooltip": "활동적인 취미는 균형 잡힌 삶을 보여줍니다",
+      "options": {
+        "": "주요 취미를 선택하세요",
+        "sports": "스포츠 및 피트니스",
+        "travel": "여행 및 모험",
+        "reading": "독서 및 학습",
+        "gaming": "게임",
+        "none": "정기적인 취미 없음"
+      }
+    },
+    "social": {
+      "label": "사회적 네트워크",
+      "tooltip": "강한 네트워크는 기회를 향상시킵니다",
+      "options": {
+        "": "네트워크 규모를 선택하세요",
+        "extensive": "광범위한 전문 네트워크",
+        "moderate": "적당한 친구 모임",
+        "small": "소규모 모임",
+        "none": "매우 제한적인 네트워크"
+      }
+    },
+    "certifications": {
+      "label": "자격증 및 기술",
+      "tooltip": "기술은 전문적 성장을 보여줍니다",
+      "options": {
+        "": "자격증을 선택하세요",
+        "professional": "전문 자격증",
+        "technical": "기술 능력",
+        "language": "어학 능력",
+        "none": "특별한 자격증 없음"
+      }
+    }
+  },
+  "metricNames": {
+    "age": "나이",
+    "education": "교육",
+    "occupation": "직업",
+    "wealth": "자산",
+    "marital": "결혼 상태",
+    "housing": "주거",
+    "vehicle": "차량",
+    "hobbies": "취미",
+    "social": "사회적 네트워크",
+    "certifications": "자격증"
+  }
+}
