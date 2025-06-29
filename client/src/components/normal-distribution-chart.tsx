@@ -25,12 +25,12 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
     const ctx = canvasRef.current.getContext('2d');
     if (!ctx) return;
 
-    // Generate normal distribution data
+    // Generate normal distribution data for 0-100 scale
     const generateNormalDistribution = (mean: number, stdDev: number, points: number) => {
       const data = [];
       const labels = [];
       for (let i = 0; i <= points; i++) {
-        const x = (i / points) * 100;
+        const x = i; // Direct 0-100 mapping
         const y = (1 / (stdDev * Math.sqrt(2 * Math.PI))) * 
                   Math.exp(-0.5 * Math.pow((x - mean) / stdDev, 2));
         data.push(y);
@@ -39,7 +39,7 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
       return { data, labels };
     };
 
-    const { data: normalData, labels } = generateNormalDistribution(75, 15, 100);
+    const { data: normalData, labels } = generateNormalDistribution(50, 20, 100);
     
     // Create gradient for the area under curve
     const gradient = ctx.createLinearGradient(0, 0, 0, 400);
@@ -47,9 +47,8 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
     gradient.addColorStop(1, 'rgba(59, 130, 246, 0.05)');
 
     // Find user position in the data
-    const userIndex = Math.round(userScore);
     const userHighlight = normalData.map((_, index) => 
-      index <= userIndex ? normalData[index] : 0
+      index <= userScore ? normalData[index] : 0
     );
 
     const config: ChartConfiguration<'line'> = {
@@ -84,6 +83,8 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
         maintainAspectRatio: true,
         scales: {
           x: {
+            min: 0,
+            max: 100,
             title: {
               display: true,
               text: t('chart.scoreLabel', '점수'),
@@ -94,6 +95,9 @@ export default function NormalDistributionChart({ userScore, percentile }: Norma
             },
             grid: {
               color: 'rgba(0, 0, 0, 0.1)'
+            },
+            ticks: {
+              stepSize: 10
             }
           },
           y: {

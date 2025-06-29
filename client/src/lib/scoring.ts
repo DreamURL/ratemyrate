@@ -41,7 +41,12 @@ const scoring = {
     // Legacy support
     'professional': 95
   },
-  wealth: { '1m+': 100, '500k-1m': 80, '100k-500k': 60, '<100k': 40 },
+  wealth: { 
+    '5b+': 100, '2b-5b': 95, '1b-2b': 90, '700m-1b': 85, '500m-700m': 80, 
+    '300m-500m': 75, '200m-300m': 70, '100m-200m': 60, '50m-100m': 50, '<50m': 40,
+    // Legacy support
+    '1m+': 90, '500k-1m': 75, '100k-500k': 60, '<100k': 40 
+  },
   marital: { 'married': 100, 'relationship': 100, 'single': 80 },
   housing: { 
     'seoul-apt': 100, 'metro-apt': 90, 'seoul-villa': 85, 'metro-villa': 80, 'provincial-own': 70,
