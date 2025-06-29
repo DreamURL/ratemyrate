@@ -32,7 +32,11 @@ const weights = {
 };
 
 const scoring = {
-  age: { '20-25': 100, '26-30': 100, '31-35': 80, '36-40': 80, '41+': 60 },
+  age: { 
+    '20-29': 100, '30-39': 90, '40-49': 80, '50-59': 70, '60-69': 60, '70-79': 50,
+    // Legacy support
+    '20-25': 100, '26-30': 100, '31-35': 80, '36-40': 80, '41+': 60 
+  },
   education: { 'phd': 100, 'master': 100, 'bachelor': 80, 'associate': 60, 'high-school': 60 },
   occupation: { 
     'doctor': 100, 'lawyer': 100, 'engineer': 95, 'professor': 100, 'finance': 95, 'tech': 90, 'consultant': 90,
