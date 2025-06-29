@@ -56,10 +56,22 @@
       "tooltip": "높은 지위의 직업은 안정성과 명성으로 가치를 인정받습니다",
       "options": {
         "": "직업을 선택하세요",
-        "professional": "전문직 (의사, 변호사, 엔지니어)",
-        "corporate": "대기업 직장인",
+        "doctor": "의사",
+        "lawyer": "변호사",
+        "engineer": "엔지니어",
+        "professor": "교수",
+        "finance": "금융권 (은행, 증권)",
+        "tech": "IT/소프트웨어 개발자",
+        "consultant": "컨설턴트",
+        "manager": "대기업 관리직",
+        "corporate": "대기업 일반직",
+        "civil-servant": "공무원",
+        "teacher": "교사",
+        "startup": "스타트업 직원",
         "small-business": "소상공인",
         "freelancer": "프리랜서",
+        "artist": "예술가/창작자",
+        "service": "서비스업",
         "unemployed": "무직"
       }
     },
@@ -89,9 +101,18 @@
       "tooltip": "부동산 소유는 중요한 성공 지표입니다",
       "options": {
         "": "주거 형태를 선택하세요",
-        "urban-own": "도시 부동산 소유",
-        "suburban-own": "교외/지방 부동산 소유",
-        "rent": "임차",
+        "seoul-apt": "서울 아파트 소유",
+        "metro-apt": "수도권 아파트 소유",
+        "seoul-villa": "서울 빌라/연립 소유",
+        "metro-villa": "수도권 빌라/연립 소유",
+        "provincial-own": "지방 부동산 소유",
+        "seoul-jeonse": "서울 전세",
+        "metro-jeonse": "수도권 전세",
+        "seoul-rent": "서울 월세",
+        "metro-rent": "수도권 월세",
+        "provincial-rent": "지방 임차",
+        "family-home": "가족 거주지 동거",
+        "goshiwon": "고시원/원룸",
         "no-housing": "고정 거주지 없음"
       }
     },
@@ -100,9 +121,15 @@
       "tooltip": "차량은 재정 상태와 라이프스타일을 반영합니다",
       "options": {
         "": "차량을 선택하세요",
-        "luxury": "고급차",
-        "mid-range": "중급차",
-        "economy": "경차",
+        "luxury-foreign": "외제 고급차 (벤츠, BMW, 아우디 등)",
+        "luxury-domestic": "국산 고급차 (제네시스, K9 등)",
+        "foreign-mid": "외제 중급차 (폭스바겐, 볼보 등)",
+        "domestic-mid": "국산 중급차 (쏘나타, K5, 말리부 등)",
+        "suv": "SUV (싼타페, 쏘렌토, 투싼 등)",
+        "compact": "소형차 (아반떼, K3, 크루즈 등)",
+        "economy": "경차 (모닝, 레이, 스파크 등)",
+        "electric": "전기차 (테슬라, 아이오닉 등)",
+        "motorcycle": "이륜차",
         "no-car": "차량 없음"
       }
     },
@@ -129,9 +156,17 @@
       "tooltip": "강한 네트워크는 기회를 향상시킵니다",
       "options": {
         "": "네트워크 규모를 선택하세요",
-        "extensive": "광범위한 전문 네트워크",
-        "moderate": "적당한 친구 모임",
-        "small": "소규모 모임",
+        "business-leader": "비즈니스 리더급 네트워크",
+        "professional": "전문직 네트워크 (의사, 변호사, 교수 등)",
+        "corporate": "대기업 임원진 네트워크",
+        "industry": "업계 전문가 네트워크",
+        "alumni": "명문대 동문 네트워크",
+        "startup": "스타트업/벤처 네트워크",
+        "creative": "예술/창작 분야 네트워크",
+        "moderate": "적당한 직장/학교 동료",
+        "local": "지역 커뮤니티 활동",
+        "online": "온라인 커뮤니티 중심",
+        "small": "소규모 친구 모임",
         "none": "매우 제한적인 네트워크"
       }
     },
@@ -140,9 +175,17 @@
       "tooltip": "기술은 전문적 성장을 보여줍니다",
       "options": {
         "": "자격증을 선택하세요",
-        "professional": "전문 자격증",
-        "technical": "기술 능력",
-        "language": "어학 능력",
+        "professional-license": "전문 면허 (의사, 변호사, 회계사 등)",
+        "financial": "금융 자격증 (CPA, CFA, FRM 등)",
+        "tech-advanced": "고급 IT 자격증 (AWS, Google Cloud, CISSP 등)",
+        "tech-basic": "기본 IT 자격증 (정보처리기사, 컴활 등)",
+        "language-advanced": "고급 어학 (TOEIC 900+, JLPT N1, HSK 6급)",
+        "language-intermediate": "중급 어학 (TOEIC 700+, JLPT N2, HSK 4급)",
+        "project-management": "프로젝트 관리 (PMP, PRINCE2 등)",
+        "design": "디자인 자격증 (Adobe 인증, UX/UI 등)",
+        "trade": "기술직 자격증 (기사, 산업기사 등)",
+        "education": "교육 관련 (교원자격증, 평생교육사 등)",
+        "language-basic": "기본 어학 (TOEIC 500+, 기초 회화)",
         "none": "특별한 자격증 없음"
       }
     }
