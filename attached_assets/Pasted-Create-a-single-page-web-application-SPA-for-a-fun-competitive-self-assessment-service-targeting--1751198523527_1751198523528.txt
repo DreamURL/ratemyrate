@@ -1,0 +1,293 @@
+Create a single-page web application (SPA) for a fun, competitive self-assessment service targeting global users, hosted on Cloudflare Pages. The website calculates a user's rank based on personal achievements (excluding parental influence) and displays individual and total grades with explanations. Support multiple languages: Korean (ko), English (en), Japanese (ja), Chinese (zh, Simplified), and Spanish (es). Use React with Tailwind CSS for a modern, mobile-friendly design, and integrate i18next for multilingual support. The app should be engaging, intuitive, and optimized for ad integration (e.g., Google AdSense).
+
+Page Structure:
+
+
+
+
+
+Header:
+
+
+
+
+
+Title: "내 경쟁력 등급 테스트" (ko), "My Competitiveness Rank Test" (en), "私の競争力ランクテスト" (ja), "我的竞争力等级测试" (zh), "¡Test de Clasificación de Competitividad!" (es).
+
+
+
+Subtitle: "부모의 도움 없이 당신의 성취를 평가해보세요!" (ko), "Evaluate your achievements without parental influence!" (en), "親の影響なしであなたの成果を評価！" (ja), "在没有父母帮助的情况下评估你的成就！" (zh), "¡Evalúa tus logros sin influencia parental!" (es).
+
+
+
+Language selector dropdown (Korean, English, Japanese, Chinese, Spanish) in the top-right corner.
+
+
+
+Minimalistic navigation with links to Terms of Use and Privacy Policy (translated for each language).
+
+
+
+Main Section - Input Form:
+
+
+
+
+
+A clean, card-based form to collect user inputs for 10 metrics, with translated labels and tooltips:
+
+
+
+
+
+Age: Dropdown (e.g., 20-25, 26-30, 31-35, 36-40, 41+).
+
+
+
+Education: Dropdown (e.g., High school, Associate degree, Bachelor’s, Master’s, PhD).
+
+
+
+Occupation: Dropdown (e.g., Professional, Corporate, Small business, Freelancer, Unemployed).
+
+
+
+Wealth (self-earned): Dropdown (e.g., <100K USD, 100K-500K, 500K-1M, 1M+ USD; adjust for local currency in tooltips, e.g., KRW for Korean, JPY for Japanese).
+
+
+
+Marital Status: Dropdown (e.g., Married, In a relationship, Single).
+
+
+
+Housing: Dropdown (e.g., Owns urban property, Owns suburban/rural, Rent, No housing; adjust for cultural context, e.g., Seoul apartment for Korean).
+
+
+
+Vehicle: Dropdown (e.g., Luxury car, Mid-range car, Economy car, No car).
+
+
+
+Hobbies/Leisure: Dropdown (e.g., Sports, Reading, Travel, Gaming, None).
+
+
+
+Social Network: Dropdown (e.g., Extensive professional network, Moderate friends, Small circle, None).
+
+
+
+Certifications/Skills: Dropdown (e.g., Professional certification, Technical skills, Language proficiency, None).
+
+
+
+Include a "Calculate My Rank" button (translated, e.g., "계산하기" (ko), "Calculate" (en), "計算する" (ja)).
+
+
+
+Add tooltips explaining each metric in the selected language (e.g., "Wealth: Only include assets you earned yourself").
+
+
+
+Results Page (displayed after form submission):
+
+
+
+
+
+Show individual grades for each of the 10 metrics (e.g., A, B, C, D) with translated explanations of grading criteria and rationale tailored to cultural context.
+
+
+
+Display a total grade (e.g., S, A, B, C) with a congratulatory message (e.g., "S급 성공러!" (ko), "S-Class Achiever!" (en), "S級の成功者！" (ja), "S级成功者！" (zh), "¡Éxito de Clase S!" (es)).
+
+
+
+Visualize grades with a radar chart (using Chart.js) showing strengths and weaknesses, with translated labels.
+
+
+
+Include a "Share on X" button to share the total grade (e.g., "My rank is A! Try yours at [URL] #CompetitivenessTest" in selected language).
+
+
+
+Provide a section for grading criteria and rationale, translated and culturally adjusted (e.g., "Why Housing Matters: Owning property in urban areas like Seoul is a key success indicator in Korea" for ko; "Owning a home reflects financial stability in urban US" for en).
+
+
+
+Add a "Try Again" button (translated) to reset the form.
+
+
+
+Footer:
+
+
+
+
+
+Links to Terms of Use, Privacy Policy, and contact email (translated for each language).
+
+
+
+Disclaimer: "This service is for entertainment purposes only. Results are subjective and not stored" (translated).
+
+Design Requirements:
+
+
+
+
+
+Style: Modern, clean, vibrant design with culturally neutral aesthetics (e.g., blue/white color scheme, minimalistic).
+
+
+
+Typography: Use Noto Sans CJK for Korean, Japanese, Chinese; Noto Sans for English and Spanish to ensure readability across languages.
+
+
+
+Responsiveness: Fully mobile-friendly with Tailwind CSS responsive classes.
+
+
+
+Animations: Subtle transitions (e.g., fade-in for results) using Tailwind or Framer Motion.
+
+
+
+Ad Integration: Reserve space for Google AdSense banners (e.g., 300x250 in sidebar, 728x90 at bottom).
+
+Functionality:
+
+
+
+
+
+Multilingual Support: Use i18next with JSON translation files for Korean, English, Japanese, Chinese (Simplified), and Spanish. Include language selector in header.
+
+
+
+Client-Side Logic: Use JavaScript to calculate grades based on weighted scores:
+
+
+
+
+
+Age: 10% (A: 20-30, B: 31-40, C: 41+).
+
+
+
+Education: 20% (A: Master’s/PhD, B: Bachelor’s, C: Associate/High school).
+
+
+
+Occupation: 20% (A: Professional, B: Corporate, C: Small business/Freelancer, D: Unemployed).
+
+
+
+Wealth: 20% (A: 1M+ USD, B: 500K-1M, C: 100K-500K, D: <100K; adjust for local currency in UI).
+
+
+
+Marital Status: 10% (A: Married/In a relationship, B: Single).
+
+
+
+Housing: 15% (A: Urban property, B: Suburban/rural, C: Rent, D: No housing).
+
+
+
+Vehicle: 5% (A: Luxury car, B: Mid-range, C: Economy/No car).
+
+
+
+Hobbies: 5% (A: Sports/Travel, B: Reading/Gaming, C: None).
+
+
+
+Social Network: 5% (A: Extensive, B: Moderate, C: Small/None).
+
+
+
+Certifications: 5% (A: Professional/Technical, B: Language, C: None).
+
+
+
+Scoring: A=100, B=80, C=60, D=40. Total score = sum of (metric score × weight). Total grade: S (90+), A (80-89), B (70-79), C (below 70).
+
+
+
+Data Handling: No data storage; all processing in the browser to comply with privacy laws (e.g., GDPR, Korean Personal Information Protection Act).
+
+
+
+Share Functionality: Generate shareable text for X in the selected language (e.g., "私のランクはA！ #CompetitivenessTest" for ja).
+
+
+
+SEO: Optimize for multilingual keywords (e.g., "한국 등급 테스트" (ko), "Competitiveness Test" (en), "競争力テスト" (ja)). Use hreflang tags for language-specific pages.
+
+Grading Criteria and Rationale (include in Results Page, translated):
+
+
+
+
+
+Age: Younger age reflects adaptability and potential in competitive societies.
+
+
+
+Education: Higher education correlates with better career opportunities globally.
+
+
+
+Occupation: High-status jobs (e.g., doctors, engineers) are valued for stability and prestige.
+
+
+
+Wealth: Self-earned wealth indicates personal success and financial independence.
+
+
+
+Marital Status: Relationship status reflects social milestones in many cultures.
+
+
+
+Housing: Owning property in urban areas is a key success indicator in many countries.
+
+
+
+Vehicle: Car ownership reflects financial status and lifestyle.
+
+
+
+Hobbies: Active hobbies show a balanced and fulfilling life.
+
+
+
+Social Network: Strong networks enhance career and social opportunities.
+
+
+
+Certifications: Skills and certifications demonstrate professional growth.
+
+Additional Notes:
+
+
+
+
+
+Ensure GDPR and local privacy law compliance by not storing user data.
+
+
+
+Include a fun, gamified feel with badges (e.g., “S급 성공러” (ko), “S-Class Achiever” (en)) and vibrant visuals.
+
+
+
+Optimize for fast loading with minimal translation file sizes.
+
+
+
+Add a disclaimer in all languages: “This service is for entertainment only and does not reflect objective value.”
+
+
+
+Use Noto Sans CJK for Asian languages and Noto Sans for others to ensure font compatibility.
