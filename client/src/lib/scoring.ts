@@ -38,7 +38,7 @@ const scoring = {
   marital: { 'married': 100, 'relationship': 100, 'single': 80 },
   housing: { 'urban-own': 100, 'suburban-own': 80, 'rent': 60, 'no-housing': 40 },
   vehicle: { 'luxury': 100, 'mid-range': 80, 'economy': 60, 'no-car': 60 },
-  hobbies: { 'sports': 100, 'travel': 100, 'reading': 80, 'gaming': 80, 'none': 60 },
+  hobbies: { 'sports': 100, 'travel': 100, 'reading': 80, 'music': 90, 'cooking': 85, 'photography': 85, 'outdoor': 95, 'creative': 90, 'social': 85, 'gaming': 70, 'none': 60 },
   social: { 'extensive': 100, 'moderate': 80, 'small': 60, 'none': 60 },
   certifications: { 'professional': 100, 'technical': 100, 'language': 80, 'none': 60 }
 };

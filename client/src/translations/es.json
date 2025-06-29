@@ -114,6 +114,12 @@
         "sports": "Deportes y Fitness",
         "travel": "Viajes y Aventura",
         "reading": "Lectura y Aprendizaje",
+        "music": "Música y Arte",
+        "cooking": "Cocina y Gastronomía",
+        "photography": "Fotografía y Video",
+        "outdoor": "Senderismo y Aire Libre",
+        "creative": "Creatividad y Manualidades",
+        "social": "Social y Fiestas",
         "gaming": "Videojuegos",
         "none": "Sin Pasatiempos Regulares"
       }

@@ -1,8 +1,20 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Chart, RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend, ChartConfiguration } from 'chart.js';
+import { 
+  Chart, 
+  RadialLinearScale, 
+  PointElement, 
+  LineElement, 
+  Filler, 
+  Tooltip, 
+  Legend, 
+  ChartConfiguration 
+} from 'chart.js';
 
-Chart.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
+// Register all components including RadarController
+import { RadarController } from 'chart.js';
+
+Chart.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend, RadarController);
 
 interface RadarChartProps {
   breakdown: Record<string, { score: number; weighted: number }>;
@@ -68,7 +80,7 @@ export default function RadarChart({ breakdown }: RadarChartProps) {
             pointLabels: {
               font: {
                 size: 11,
-                weight: '500'
+                weight: 500
               },
               color: '#475569'
             }

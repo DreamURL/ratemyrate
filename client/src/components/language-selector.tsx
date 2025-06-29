@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const languages = [
   { code: 'en', flag: '🇺🇸', name: 'English' },
   { code: 'ko', flag: '🇰🇷', name: '한국어' },
-  { code: 'ja', flag: '🇯🇵', name: '日本語' },
+  { code: 'ja', flag: '🇯🇵', name: '日본語' },
   { code: 'zh', flag: '🇨🇳', name: '中文' },
   { code: 'es', flag: '🇪🇸', name: 'Español' }
 ];
@@ -19,10 +20,12 @@ export default function LanguageSelector() {
   };
 
   // Load saved language preference on mount
-  const savedLanguage = localStorage.getItem('preferred-language');
-  if (savedLanguage && savedLanguage !== i18n.language) {
-    i18n.changeLanguage(savedLanguage);
-  }
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('preferred-language');
+    if (savedLanguage && savedLanguage !== i18n.language) {
+      i18n.changeLanguage(savedLanguage);
+    }
+  }, [i18n]);
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
