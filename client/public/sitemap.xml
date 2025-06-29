@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage (Korean default) -->
+  <url>
+    <loc>https://yourdomain.com/</loc>
+    <lastmod>2025-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yourdomain.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yourdomain.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://yourdomain.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yourdomain.com/"/>
+  </url>
+  <!-- English -->
+  <url>
+    <loc>https://yourdomain.com/en</loc>
+    <lastmod>2025-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yourdomain.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yourdomain.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://yourdomain.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yourdomain.com/"/>
+  </url>
+  <!-- Japanese -->
+  <url>
+    <loc>https://yourdomain.com/ja</loc>
+    <lastmod>2025-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yourdomain.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yourdomain.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://yourdomain.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yourdomain.com/"/>
+  </url>
+  <!-- Chinese -->
+  <url>
+    <loc>https://yourdomain.com/zh</loc>
+    <lastmod>2025-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yourdomain.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yourdomain.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://yourdomain.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yourdomain.com/"/>
+  </url>
+
+  <!-- Terms of Use (언어별로 필요시 추가) -->
+  <url>
+    <loc>https://yourdomain.com/terms-of-use</loc>
+    <lastmod>2025-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://yourdomain.com/privacy-policy</loc>
+    <lastmod>2025-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

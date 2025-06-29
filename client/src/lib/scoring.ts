@@ -12,7 +12,7 @@ export interface AssessmentData {
 }
 
 export interface ScoreResult {
-  grade: 'S' | 'A' | 'B' | 'C';
+  grade: 'S' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F';
   totalScore: number;
   percentile: number;
   breakdown: Record<string, { score: number; weighted: number }>;
@@ -37,13 +37,13 @@ const scoring = {
     // Legacy support
     '20-25': 100, '26-30': 100, '31-35': 80, '36-40': 80, '41+': 60 
   },
-  education: { 'phd': 100, 'master': 100, 'bachelor': 80, 'associate': 60, 'high-school': 60 },
+  education: { 'phd': 100, 'master': 90, 'bachelor': 75, 'associate': 60, 'high-school': 45 },
   occupation: { 
-    'doctor': 100, 'lawyer': 100, 'engineer': 95, 'professor': 100, 'finance': 95, 'tech': 90, 'consultant': 90,
-    'manager': 85, 'corporate': 80, 'civil-servant': 75, 'teacher': 70, 'startup': 75, 'small-business': 60, 
-    'freelancer': 60, 'artist': 55, 'service': 50, 'unemployed': 40,
+    'doctor': 100, 'lawyer': 100, 'engineer': 90, 'professor': 100, 'finance': 90, 'tech': 80, 'consultant': 80,
+    'manager': 75, 'corporate': 70, 'civil-servant': 65, 'teacher': 60, 'startup': 60, 'small-business': 50, 
+    'freelancer': 50, 'artist': 40, 'service': 35, 'unemployed': 30,
     // Legacy support
-    'professional': 95
+    'professional': 90
   },
   wealth: { 
     '5b+': 100, '2b-5b': 95, '1b-2b': 90, '700m-1b': 85, '500m-700m': 80, 
@@ -51,33 +51,33 @@ const scoring = {
     // Legacy support
     '1m+': 90, '500k-1m': 75, '100k-500k': 60, '<100k': 40 
   },
-  marital: { 'married': 100, 'relationship': 100, 'single': 80 },
+  marital: { 'married': 100, 'relationship': 80, 'single': 60 },
   housing: { 
     'seoul-apt': 100, 'metro-apt': 90, 'seoul-villa': 85, 'metro-villa': 80, 'provincial-own': 70,
-    'seoul-jeonse': 75, 'metro-jeonse': 70, 'seoul-rent': 60, 'metro-rent': 55, 'provincial-rent': 50,
-    'family-home': 45, 'goshiwon': 35, 'no-housing': 30,
+    'seoul-jeonse': 65, 'metro-jeonse': 60, 'seoul-rent': 55, 'metro-rent': 50, 'provincial-rent': 45,
+    'family-home': 40, 'goshiwon': 35, 'no-housing': 30,
     // Legacy support
     'urban-own': 90, 'suburban-own': 70, 'rent': 55
   },
   vehicle: { 
-    'luxury-foreign': 100, 'luxury-domestic': 95, 'foreign-mid': 85, 'domestic-mid': 80, 'suv': 75,
-    'compact': 65, 'economy': 55, 'electric': 90, 'motorcycle': 50, 'no-car': 45,
+    'luxury-foreign': 100, 'luxury-domestic': 90, 'foreign-mid': 80, 'domestic-mid': 70, 'suv': 65,
+    'compact': 55, 'economy': 45, 'electric': 80, 'motorcycle': 40, 'no-car': 30,
     // Legacy support
-    'luxury': 95, 'mid-range': 75
+    'luxury': 90, 'mid-range': 70
   },
-  hobbies: { 'sports': 100, 'travel': 100, 'reading': 80, 'music': 90, 'cooking': 85, 'photography': 85, 'outdoor': 95, 'creative': 90, 'social': 85, 'gaming': 70, 'none': 60 },
+  hobbies: { 'sports': 100, 'travel': 90, 'reading': 80, 'music': 75, 'cooking': 70, 'photography': 70, 'outdoor': 80, 'creative': 75, 'social': 70, 'gaming': 60, 'none': 40 },
   social: { 
-    'business-leader': 100, 'professional': 95, 'corporate': 90, 'industry': 85, 'alumni': 90, 'startup': 80,
-    'creative': 75, 'moderate': 70, 'local': 65, 'online': 60, 'small': 55, 'none': 40,
+    'business-leader': 100, 'professional': 90, 'corporate': 80, 'industry': 75, 'alumni': 75, 'startup': 70,
+    'creative': 65, 'moderate': 60, 'local': 55, 'online': 50, 'small': 45, 'none': 30,
     // Legacy support
-    'extensive': 90
+    'extensive': 80
   },
   certifications: { 
-    'professional-license': 100, 'financial': 95, 'tech-advanced': 90, 'tech-basic': 75, 'language-advanced': 85,
-    'language-intermediate': 75, 'project-management': 80, 'design': 70, 'trade': 70, 'education': 65,
-    'language-basic': 60, 'none': 40,
+    'professional-license': 100, 'financial': 90, 'tech-advanced': 80, 'tech-basic': 65, 'language-advanced': 75,
+    'language-intermediate': 65, 'project-management': 70, 'design': 60, 'trade': 60, 'education': 55,
+    'language-basic': 50, 'none': 30,
     // Legacy support
-    'professional': 90, 'technical': 80, 'language': 70
+    'professional': 80, 'technical': 70, 'language': 60
   }
 };
 
@@ -94,22 +94,25 @@ export function calculateScore(data: AssessmentData): ScoreResult {
     breakdown[metric] = { score, weighted: weightedScore };
   });
 
-  // Calculate percentile based on normal distribution (mean=75, std=15)
+  // Calculate percentile based on normal distribution (mean=50, std=20)
   const percentile = Math.round(calculatePercentile(totalScore));
 
-  let grade: 'S' | 'A' | 'B' | 'C';
-  if (totalScore >= 90) grade = 'S';
-  else if (totalScore >= 80) grade = 'A';
-  else if (totalScore >= 70) grade = 'B';
-  else grade = 'C';
+  let grade: 'S' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F';
+  if (totalScore >= 95) grade = 'S';
+  else if (totalScore >= 85) grade = 'A';
+  else if (totalScore >= 75) grade = 'B';
+  else if (totalScore >= 65) grade = 'C';
+  else if (totalScore >= 55) grade = 'D';
+  else if (totalScore >= 45) grade = 'E';
+  else grade = 'F';
 
   return { grade, totalScore: Math.round(totalScore), percentile, breakdown };
 }
 
 function calculatePercentile(score: number): number {
-  // Using normal distribution with mean=75, std=15
-  const mean = 75;
-  const std = 15;
+  // Using normal distribution with mean=50, std=20 (그래프와 일치)
+  const mean = 50;
+  const std = 20;
   const z = (score - mean) / std;
   
   // Approximation of cumulative normal distribution
@@ -134,9 +137,12 @@ function calculatePercentile(score: number): number {
   return Math.max(1, Math.min(99, percentile));
 }
 
-export function getLetterGrade(score: number): 'A' | 'B' | 'C' | 'D' {
-  if (score >= 90) return 'A';
-  else if (score >= 70) return 'B';
-  else if (score >= 50) return 'C';
-  else return 'D';
+export function getLetterGrade(score: number): 'S' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' {
+  if (score >= 95) return 'S';
+  else if (score >= 85) return 'A';
+  else if (score >= 75) return 'B';
+  else if (score >= 65) return 'C';
+  else if (score >= 55) return 'D';
+  else if (score >= 45) return 'E';
+  else return 'F';
 }

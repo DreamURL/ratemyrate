@@ -22,7 +22,10 @@ export default function ResultsDisplay({ results, onRetry }: ResultsDisplayProps
     'S': 'grade-s',
     'A': 'grade-a',
     'B': 'grade-b',
-    'C': 'grade-c'
+    'C': 'grade-c',
+    'D': 'grade-d',
+    'E': 'grade-e',
+    'F': 'grade-f',
   };
 
   const handleShare = () => {
@@ -103,7 +106,11 @@ export default function ResultsDisplay({ results, onRetry }: ResultsDisplayProps
             transition={{ duration: 0.5, delay: 0.2 }}
             className={`inline-flex items-center justify-center w-24 h-24 rounded-full text-4xl font-bold text-white mb-4 ${gradeColors[grade]}`}
           >
-            {grade}
+            {['D','E','F'].includes(grade) ? (
+              grade === 'D' ? '🔥' : grade === 'E' ? '🌱' : '💀'
+            ) : (
+              grade
+            )}
           </motion.div>
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}

@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "wouter";
 import LanguageSelector from "@/components/language-selector";
 import AssessmentForm from "@/components/assessment-form";
 import ResultsDisplay from "@/components/results-display";
+import MetaTags from "@/components/seo/meta-tags";
+import StructuredData from "@/components/seo/structured-data";
 import { ScoreResult } from "@/lib/scoring";
 
 export default function Home() {
   const { t, i18n } = useTranslation();
   const [results, setResults] = useState<ScoreResult | null>(null);
   const [showResults, setShowResults] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   // Update body font class based on language
   useEffect(() => {
@@ -41,18 +45,22 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
   return (
     <div className="bg-slate-50 min-h-screen">
+      <MetaTags />
+      <StructuredData />
+      
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
               <div className="flex items-center">
-                <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">🏆</span>
-                </div>
-                <h1 className="ml-2 text-xl font-semibold text-slate-900">
+                <h1 className="text-xl font-semibold text-slate-900 ml-0">
                   {t('siteTitle')}
                 </h1>
               </div>
@@ -62,12 +70,12 @@ export default function Home() {
               <LanguageSelector />
               
               <nav className="hidden md:flex space-x-4">
-                <a href="#" className="text-slate-600 hover:text-blue-600 text-sm font-medium">
+                <Link href="/terms-of-use" className="text-slate-600 hover:text-blue-600 text-sm font-medium">
                   {t('terms')}
-                </a>
-                <a href="#" className="text-slate-600 hover:text-blue-600 text-sm font-medium">
+                </Link>
+                <Link href="/privacy-policy" className="text-slate-600 hover:text-blue-600 text-sm font-medium">
                   {t('privacy')}
-                </a>
+                </Link>
               </nav>
             </div>
           </div>
@@ -79,9 +87,10 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <img 
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=400" 
-            alt="Diverse team collaboration" 
+            src="/images/mainimage.jpg" 
+            alt="Competitive Assessment Main Image" 
             className="w-full h-64 object-cover rounded-2xl shadow-lg mb-8" 
+            onError={handleImageError}
           />
           
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
@@ -117,12 +126,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center space-y-4">
             <nav className="flex justify-center space-x-6">
-              <a href="#" className="text-slate-600 hover:text-blue-600 text-sm">
+              <Link href="/terms-of-use" className="text-slate-600 hover:text-blue-600 text-sm">
                 {t('terms')}
-              </a>
-              <a href="#" className="text-slate-600 hover:text-blue-600 text-sm">
+              </Link>
+              <Link href="/privacy-policy" className="text-slate-600 hover:text-blue-600 text-sm">
                 {t('privacy')}
-              </a>
+              </Link>
               <a href="mailto:contact@example.com" className="text-slate-600 hover:text-blue-600 text-sm">
                 {t('contact')}
               </a>

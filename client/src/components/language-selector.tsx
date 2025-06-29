@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 const languages = [
   { code: 'en', flag: '🇺🇸', name: 'English' },
   { code: 'ko', flag: '🇰🇷', name: '한국어' },
-  { code: 'ja', flag: '🇯🇵', name: '日본語' },
+  { code: 'ja', flag: '🇯🇵', name: '日本語' },
   { code: 'zh', flag: '🇨🇳', name: '中文' },
   { code: 'es', flag: '🇪🇸', name: 'Español' }
 ];

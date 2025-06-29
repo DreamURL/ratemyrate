@@ -1,0 +1,89 @@
+E:
+cd "E:/외주/웹페이지_인테리어/interior_website"
+git init
+
+저장소연결
+git remote remove origin
+git remote add origin https://github.com/minsun1231/Design_gwon.git
+
+사용자정보설정
+git config --global user.name "minsun1231"
+git config --global user.email "oodework@gmail.com"
+
+git rm -r --cached .
+
+git add -A
+git commit -m "20250621_v1"
+git push -f origin master
+
+
+%%%%%%%%%%%%%%%%%%%
+해야할 것
+
+env, 환경 변수에 도메인 수정
+모든 layout.tsx의 도메인 수정
+worker.js 내 도메인 수정
+* 도메인 연결 후 site-config 하단 verification 수정
+robots.txt의 도메인 수정
+https://validator.schema.org/ 스키마 검사
+https://search.google.com/test/rich-results 리치테스트
+https://searchadvisor.naver.com/ 네이버 서치어드바이저
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%
+지금 인테리어 회사를 다른 포트폴리오 전문 회사로 바꿀 시에
+1. config/site-config.ts       # 회사정보, URL, 연락처
+2. .env.local                  # Supabase, R2, 도메인 설정
+3. public/robots.txt           # 도메인 변경
+4. cloudflare-worker/worker.js # R2 도메인 변경  
+5. next-sitemap.config.js      # 사이트맵 URL
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%
+도메인 등록 후 검색엔진 등록
+https://search.google.com/search-console/
+
+
+%%%%%%%%%%%%%%%%%%%
+제작 흐름
+1. v0를 통해서 프로토 버전 제작
+2. 로컬로 다운로드하고 필요한 파일 설치 npm install
+3. vs code copilot으로 원하는 기능 추가
+4. 백엔드 연결 supabase, cloudflare R2, worker 연결
+4-0 env 파일 생성
+4-1 supabase
+4-2 cloudflare: cloudflare-worker/worker.js, middleware.ts
+5. 각 기능 세부 수정
+6. robots.txt
+7. 보안강화 https://developer.mozilla.org/, next.config.ts
+8. 메타데이터 생성
+%%%%%%%%%%%%%%%%%%%
+
+
+사이트맵주소
+https://design-gwon.vercel.app/sitemap.xml
+
+worker 로그인
+E:
+cd "E:/외주/웹페이지_인테리어/interior_website/cloudflare-worker"
+wrangler whoami
+wrangler deploy
+wrangler deployments list
+
+토큰 값
+RUhYKIyYRqpiW8A8z2OUvQxbCPVF5vnSyK42b3fc
+클릭하여 복사
+
+S3 클라이언트에 대해 다음 인증서를 사용하십시오.
+액세스 키 ID
+4f417d3540a01cd38b415c9212b46e66
+클릭하여 복사
+
+비밀 액세스 키
+7b17b2ebd4db4ae52f95337aa929b92baddabc295b1a376a7dc4e39ae5d0c0de
+클릭하여 복사
+
+S3 클라이언트에 대해 관할지별 엔드포인트를 사용하십시오.
+기본값유럽 연합(EU)
+https://fbbed292bb18652f9b171bf01b017daf.r2.cloudflarestorage.com
+클릭하여 복사

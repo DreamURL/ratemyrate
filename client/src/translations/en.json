@@ -5,16 +5,22 @@
   "formTitle": "Complete Your Assessment",
   "calculateBtn": "Calculate My Rank 🚀",
   "gradeTitle": {
-    "S": "S-Class Achiever!",
-    "A": "A-Class Achiever!",
-    "B": "B-Class Achiever!",
-    "C": "C-Class Achiever!"
+    "S": "S-class Achiever!",
+    "A": "A-class Achiever!",
+    "B": "B-class Achiever!",
+    "C": "C-class Achiever!",
+    "D": "D-class Challenger!",
+    "E": "E-class Challenger!",
+    "F": "F-class Challenger!"
   },
   "gradeDescription": {
-    "S": "Outstanding! You're in the top tier of achievers!",
-    "A": "Excellent! You're doing great, keep pushing forward!",
-    "B": "Good work! There's room for improvement!",
-    "C": "Keep striving! Everyone starts somewhere!"
+    "S": "Outstanding! You are a top-tier achiever!",
+    "A": "Excellent! Keep moving forward!",
+    "B": "Good job! There is room for improvement!",
+    "C": "Keep trying! Everyone starts somewhere!",
+    "D": "Plenty of room to grow. Keep challenging yourself!",
+    "E": "Effort never betrays. Take it step by step!",
+    "F": "Getting started is half the battle. Don't give up!"
   },
   "shareText": "My competitiveness rank is {{grade}}! Try yours at {{url}} #CompetitivenessTest",
   "shareBtn": "Share on X",
@@ -32,46 +38,65 @@
       "tooltip": "Younger age reflects adaptability and potential",
       "options": {
         "": "Select your age range",
-        "20-25": "20-25",
-        "26-30": "26-30",
-        "31-35": "31-35",
-        "36-40": "36-40",
-        "41+": "41+"
+        "20-29": "20-29 years",
+        "30-39": "30-39 years",
+        "40-49": "40-49 years",
+        "50-59": "50-59 years",
+        "60-69": "60-69 years",
+        "70-79": "70-79 years"
       }
     },
     "education": {
       "label": "Education Level",
       "tooltip": "Higher education correlates with better opportunities",
       "options": {
-        "": "Select your education",
+        "": "Select your education level",
         "high-school": "High School",
         "associate": "Associate Degree",
         "bachelor": "Bachelor's Degree",
         "master": "Master's Degree",
-        "phd": "PhD/Doctorate"
+        "phd": "PhD"
       }
     },
     "occupation": {
       "label": "Occupation",
-      "tooltip": "High-status jobs are valued for stability and prestige",
+      "tooltip": "High-status professions are valued for stability and prestige",
       "options": {
         "": "Select your occupation",
-        "professional": "Professional (Doctor, Lawyer, Engineer)",
+        "doctor": "Doctor",
+        "lawyer": "Lawyer",
+        "engineer": "Engineer",
+        "professor": "Professor",
+        "finance": "Finance (Banking, Securities)",
+        "tech": "IT/Software Developer",
+        "consultant": "Consultant",
+        "manager": "Corporate Manager",
         "corporate": "Corporate Employee",
+        "civil-servant": "Civil Servant",
+        "teacher": "Teacher",
+        "startup": "Startup Employee",
         "small-business": "Small Business Owner",
         "freelancer": "Freelancer",
+        "artist": "Artist/Creator",
+        "service": "Service Industry",
         "unemployed": "Unemployed"
       }
     },
     "wealth": {
-      "label": "Self-Earned Wealth (USD)",
-      "tooltip": "Only include assets you earned yourself",
+      "label": "Self-made Assets (USD)",
+      "tooltip": "Include only assets you've earned yourself",
       "options": {
-        "": "Select your wealth range",
-        "<100k": "Less than $100K",
-        "100k-500k": "$100K - $500K",
-        "500k-1m": "$500K - $1M",
-        "1m+": "$1M+"
+        "": "Select your asset range",
+        "<50m": "Less than $50K",
+        "50m-100m": "$50K - $100K",
+        "100m-200m": "$100K - $200K",
+        "200m-300m": "$200K - $300K",
+        "300m-500m": "$300K - $500K",
+        "500m-700m": "$500K - $700K",
+        "700m-1b": "$700K - $1M",
+        "1b-2b": "$1M - $2M",
+        "2b-5b": "$2M - $5M",
+        "5b+": "Over $5M"
       }
     },
     "marital": {
@@ -80,59 +105,82 @@
       "options": {
         "": "Select your status",
         "married": "Married",
-        "relationship": "In a Relationship",
+        "relationship": "In a relationship",
         "single": "Single"
       }
     },
     "housing": {
       "label": "Housing Situation",
-      "tooltip": "Property ownership is a key success indicator",
+      "tooltip": "Property ownership is an important success indicator",
       "options": {
-        "": "Select your housing",
-        "urban-own": "Own Urban Property",
-        "suburban-own": "Own Suburban/Rural Property",
-        "rent": "Rent",
-        "no-housing": "No Permanent Housing"
+        "": "Select your housing type",
+        "seoul-apt": "Own apartment in prime city",
+        "metro-apt": "Own apartment in metro area",
+        "seoul-villa": "Own villa/townhouse in prime city",
+        "metro-villa": "Own villa/townhouse in metro area",
+        "provincial-own": "Own property in suburbs",
+        "seoul-jeonse": "Long-term lease in prime city",
+        "metro-jeonse": "Long-term lease in metro area",
+        "seoul-rent": "Rent in prime city",
+        "metro-rent": "Rent in metro area",
+        "provincial-rent": "Rent in suburbs",
+        "family-home": "Living with family",
+        "goshiwon": "Studio/small room",
+        "no-housing": "No fixed residence"
       }
     },
     "vehicle": {
       "label": "Vehicle Ownership",
-      "tooltip": "Vehicle reflects financial status and lifestyle",
+      "tooltip": "Vehicles reflect financial status and lifestyle",
       "options": {
         "": "Select your vehicle",
-        "luxury": "Luxury Car",
-        "mid-range": "Mid-Range Car",
-        "economy": "Economy Car",
-        "no-car": "No Car"
+        "luxury-foreign": "Luxury foreign car (Mercedes, BMW, Audi, etc.)",
+        "luxury-domestic": "Luxury domestic car (Lexus, Cadillac, etc.)",
+        "foreign-mid": "Mid-range foreign car (Volkswagen, Volvo, etc.)",
+        "domestic-mid": "Mid-range domestic car (Honda, Toyota, etc.)",
+        "suv": "SUV (CR-V, RAV4, Explorer, etc.)",
+        "compact": "Compact car (Civic, Corolla, Sentra, etc.)",
+        "economy": "Economy car (Versa, Mirage, Rio, etc.)",
+        "electric": "Electric vehicle (Tesla, Leaf, etc.)",
+        "motorcycle": "Motorcycle",
+        "no-car": "No vehicle"
       }
     },
     "hobbies": {
       "label": "Hobbies & Leisure",
       "tooltip": "Active hobbies show a balanced life",
       "options": {
-        "": "Select your primary hobby",
+        "": "Select your main hobby",
         "sports": "Sports & Fitness",
         "travel": "Travel & Adventure",
         "reading": "Reading & Learning",
         "music": "Music & Arts",
-        "cooking": "Cooking & Dining",
+        "cooking": "Cooking & Fine dining",
         "photography": "Photography & Video",
-        "outdoor": "Hiking & Outdoors",
+        "outdoor": "Hiking & Outdoor activities",
         "creative": "Creative & DIY",
-        "social": "Social & Parties",
+        "social": "Social gatherings & Parties",
         "gaming": "Gaming",
-        "none": "No Regular Hobbies"
+        "none": "No regular hobbies"
       }
     },
     "social": {
       "label": "Social Network",
       "tooltip": "Strong networks enhance opportunities",
       "options": {
-        "": "Select your network size",
-        "extensive": "Extensive Professional Network",
-        "moderate": "Moderate Friend Circle",
-        "small": "Small Circle",
-        "none": "Very Limited Network"
+        "": "Select your network scope",
+        "business-leader": "Business leader level network",
+        "professional": "Professional network (doctors, lawyers, professors, etc.)",
+        "corporate": "Corporate executive network",
+        "industry": "Industry expert network",
+        "alumni": "Prestigious university alumni network",
+        "startup": "Startup/venture network",
+        "creative": "Arts/creative field network",
+        "moderate": "Moderate workplace/school colleagues",
+        "local": "Local community activities",
+        "online": "Online community focused",
+        "small": "Small friend groups",
+        "none": "Very limited network"
       }
     },
     "certifications": {
@@ -140,10 +188,18 @@
       "tooltip": "Skills demonstrate professional growth",
       "options": {
         "": "Select your certifications",
-        "professional": "Professional Certification",
-        "technical": "Technical Skills",
-        "language": "Language Proficiency",
-        "none": "No Special Certifications"
+        "professional-license": "Professional license (Doctor, Lawyer, CPA, etc.)",
+        "financial": "Financial certifications (CPA, CFA, FRM, etc.)",
+        "tech-advanced": "Advanced IT certifications (AWS, Google Cloud, CISSP, etc.)",
+        "tech-basic": "Basic IT certifications (CompTIA, Microsoft, etc.)",
+        "language-advanced": "Advanced language skills (TOEIC 900+, Fluent multilingual)",
+        "language-intermediate": "Intermediate language skills (TOEIC 700+, Conversational)",
+        "project-management": "Project management (PMP, PRINCE2, etc.)",
+        "design": "Design certifications (Adobe certified, UX/UI, etc.)",
+        "trade": "Technical certifications (Engineering, Trade skills, etc.)",
+        "education": "Education related (Teaching license, Training certifications, etc.)",
+        "language-basic": "Basic language skills (TOEIC 500+, Basic conversation)",
+        "none": "No special certifications"
       }
     }
   },
@@ -151,12 +207,73 @@
     "age": "Age",
     "education": "Education",
     "occupation": "Occupation",
-    "wealth": "Wealth",
+    "wealth": "Assets",
     "marital": "Marital Status",
     "housing": "Housing",
     "vehicle": "Vehicle",
     "hobbies": "Hobbies",
     "social": "Social Network",
     "certifications": "Certifications"
+  },
+  "percentileTitle": "Top {{percent}}%",
+  "percentileDescription": "You are in the top {{percent}}% of all users",
+  "clickForDetails": "Click each item to see detailed explanations",
+  "gradeLabel": "Grade",
+  "scoreLabel": "Score",
+  "pointsLabel": " points",
+  "gradeExplanationDescription": "Check the reasoning behind this item's grading",
+  "chart": {
+    "populationDistribution": "Population Distribution",
+    "yourPosition": "Your Position",
+    "scoreLabel": "Score",
+    "frequencyLabel": "Frequency",
+    "yourPercentile": "Your Percentile"
+  },
+  "explanations": {
+    "education": {
+      "high": "🎓 Excellent education level! Graduate-level education demonstrates complex problem-solving abilities and expertise. Statistics show that graduate degree holders earn 20-30% more on average than undergraduate graduates and are twice as likely to advance to executive positions. Continue strengthening your future competitiveness through lifelong learning.",
+      "medium": "📚 You have a solid educational foundation. A bachelor's degree demonstrates logical thinking and analytical skills essential in modern society. Additional specialized education or certifications could significantly enhance your competitiveness by increasing expertise in specific fields.",
+      "low": "📖 Education is a lifelong investment. While you can succeed at your current level, strengthening your capabilities through online courses, evening universities, or professional training programs will open more doors of opportunity. Many successful entrepreneurs also started their education later in life."
+    },
+    "occupation": {
+      "high": "🏆 You're in a top-tier professional field! Occupations like doctors, lawyers, and professors have high social trust and guarantee long-term stability. These professions are relatively safe even during economic downturns and allow for continuous growth through lifelong learning. Leverage your expertise to expand your influence.",
+      "medium": "💼 You have a stable job with growth potential. Large corporations and civil service positions offer stability and systematic promotion opportunities. By accumulating work experience while developing leadership and expertise, you can leap to higher levels.",
+      "low": "🚀 Every success starts with small beginnings. Even if your current job isn't ideal, you can create opportunities through experience and networking. Consider career transitions through acquiring new skills, starting side businesses, or preparing for entrepreneurship. Many success stories began with such challenges."
+    },
+    "wealth": {
+      "high": "💰 You've achieved the upper class with economic freedom! Assets over $1M are not just wealth but the foundation for social influence and opportunity creation. Now is the time to consider asset preservation, social contribution, investment diversification, and planning for the next generation. Focus on the sustainability and meaningful use of wealth.",
+      "medium": "💵 You've built a solid financial foundation. Assets in the $100K-$1M range provide economic stability and room to explore additional investment or business opportunities. You can accelerate asset growth through diversifying your portfolio with real estate, stocks, and bonds.",
+      "low": "🌱 You're at the starting point of asset formation. Even small amounts can create compound interest magic through consistent saving and investment. Build a strong foundation with 20%+ monthly savings, retirement planning, and diversify income sources through side businesses or investment education."
+    },
+    "marital": {
+      "high": "❤️ You've built a stable partnership! Marriage or long-term relationships create emotional stability and economic synergy. You can promote development for both individuals and families through setting joint goals, financial planning, and supporting each other's growth. Continuously improving relationship quality is important.",
+      "medium": "💑 Your current relationship status reflects your values and lifestyle well. Whether single or coupled, growing at your own pace is important. Maintain a good balance between personal achievement and relationships while keeping an open mind about the future.",
+      "low": "🌟 Relationships require timing and preparation. You might be in a period of focusing on yourself or preparing for new encounters. Through self-development and social activities, you can naturally meet good connections while becoming an attractive person."
+    },
+    "housing": {
+      "high": "🏠 You've successfully secured real estate assets! Owning property in prime locations is not just living space but core to asset appreciation. Monitor real estate market changes and maximize asset value through additional investments or upgrades. A stable residential environment will also greatly contribute to quality of life improvement.",
+      "medium": "🏡 You've secured a stable residential environment. Leasing or metropolitan residence shows a good balance between economic rationality and lifestyle. Plan for homeownership or moving to better locations over time. It's important to reduce housing costs while increasing savings capacity.",
+      "low": "🏘️ Housing is life's foundation and the starting point of future plans. Even if current circumstances are difficult, you can gradually improve your residential environment through savings plans, loan preparation, and income increases. There are countless stories of people who started in small spaces and succeeded."
+    },
+    "vehicle": {
+      "high": "🚗 You own a premium vehicle! Luxury cars are symbols of social status and success beyond mere transportation. Especially in business, they become important tools for appealing trustworthiness and professionalism. Maintain your dignified image through vehicle maintenance, driving manners, and safe driving.",
+      "medium": "🚙 You've made practical and rational vehicle choices. SUVs and mid-size cars are suitable for both family and business, satisfying both economy and convenience. Maintain vehicle value through regular maintenance and consider upgrades as needed.",
+      "low": "🚌 You can live a successful life without a vehicle. Especially in areas with developed public transportation, it can be more economical and environmentally friendly. While utilizing car sharing or rental cars when needed, plan savings for future vehicle purchases."
+    },
+    "hobbies": {
+      "high": "🎯 You enjoy diverse and active hobbies! Sports, travel, and creative activities greatly help with stress relief and creativity enhancement. These hobbies also provide networking opportunities and can sometimes develop into new business ideas or side businesses. Hobby-based self-development positively impacts work performance, and diverse experiences cultivate creative problem-solving abilities. Continue adding richness to life through new challenges.",
+      "medium": "🎨 You maintain healthy and meaningful hobby activities. Hobbies like reading and music contribute to intellectual growth and emotional stability. Hobby activities can become tools for personal branding and networking beyond simple leisure. Consider developing existing hobbies more deeply or challenging new fields. Expand your network through hobby-based gatherings.",
+      "low": "🌟 It's a good time to start new hobbies! Hobbies are key to self-development and stress management, not just ways to pass time. The role of hobbies in preventing burnout and fostering creativity is very important in modern society. Start small: weekend activities, taking online courses, joining interest groups, etc. Gradually expanding your hobby areas will greatly improve life satisfaction."
+    },
+    "social": {
+      "high": "🤝 You possess excellent networking abilities! Business leader-level or professional networks provide infinite possibilities for information exchange, business opportunities, and career development. Strong networks have a multiplier effect that amplifies individual capabilities. Manage these relationships well, help each other, and further enhance network quality through mentoring or social contribution activities. Networks are platforms for mutual growth, not just relationships.",
+      "medium": "👥 You maintain meaningful human relationships well. Relationships with workplace colleagues or school friends can bring unexpected opportunities along with daily joy. The value of genuine human relationships shines even more in the digital age. Deepen existing relationships and actively create meetings with new people through social media or group activities.",
+      "low": "🌱 Building human relationships is a gradual process. A few genuine friends can be more valuable than numerous superficial relationships. If you're introverted, starting with online communities is also a good method. Try expanding your network naturally through joining clubs, volunteer activities, or attending seminars. Approach with a mindset of helping others first to build genuine relationships."
+    },
+    "certifications": {
+      "high": "🏅 You possess advanced qualifications that demonstrate professional recognition! Professional licenses, CPA, advanced IT certifications, etc., prove you're at the highest level in your field. Such qualifications become lifelong assets and key elements that raise your career ceiling. Further strengthen your expertise through continuous education and latest trend learning to emerge as an industry leader. Consider social responsibility and influence as a professional.",
+      "medium": "📜 You possess good certifications that help with practical work. IT certifications and language abilities become great competitive advantages in the global era. Certifications in multiple fields especially show integrative thinking and diverse perspectives as strengths. Expand both breadth and depth of expertise by upgrading existing qualifications to higher levels or acquiring additional certifications in related fields.",
+      "low": "📋 Certifications are important tools for objectively proving abilities. They're also indicators showing learning ability and achievement motivation. Start with basic certifications related to your work or areas of interest. You can prepare efficiently using online courses or study groups. Small achievements will become stepping stones for bigger challenges. Knowledge and networking gained during certification acquisition also become great assets."
+    }
   }
 }
